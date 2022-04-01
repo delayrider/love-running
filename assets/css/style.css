@@ -6,20 +6,21 @@
     border: none;
 }
 
-body{
+body {
     font-family: Lato, sans-serif;
     font-weight: 300;
     color: #3a3a3a;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
     color: #252525;
 }
 
-#logo{
+#logo {
     float: left;
     font-size: 280%;
     margin-left: 30px;
@@ -27,36 +28,37 @@ h1, h2{
 
 /* Navigation Links */
 
-#menu{
+#menu {
     font-size: 110%;
     letter-spacing: 4px;
 }
 
-#menu , #logo {
+#menu,
+#logo {
     line-height: 75px;
 }
 
-#menu li{
+#menu li {
     float: right;
     list-style-type: none;
     margin-right: 30px;
 }
 
-#menu a{
+#menu a {
     text-decoration: none;
     color: inherit;
 }
 
-#menu a:hover{
+#menu a:hover {
     border-bottom: 1px solid #3a3a3a;
 }
 
-.active{
+.active {
     border-bottom: 1px solid #3a3a3a;
 }
 
 /* Hero Image */
-#hero-outer{
+#hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
@@ -64,14 +66,15 @@ h1, h2{
     position: relative;
 }
 
-#cover-text, #cover-text h2{
+#cover-text,
+#cover-text h2 {
     color: #ffffff;
 }
 
-#hero-image{
+#hero-image {
     height: 600px;
     width: 100%;
-    background: url('../images/hero-image.webp') no-repeat center center;  
+    background: url('../images/hero-image.webp') no-repeat center center;
 
     /* animates zoom effect on loading page */
     animation-name: hero-zoom;
@@ -80,16 +83,17 @@ h1, h2{
 }
 
 /* creates the level of zoom on the hero image */
-@keyframes hero-zoom{
-    from{
+@keyframes hero-zoom {
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.1);
     }
 }
 
-#cover-text{
+#cover-text {
     font-size: 130%;
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
@@ -108,35 +112,35 @@ h1, h2{
     position: absolute;
 }
 
-#club-ethos{
+#club-ethos {
     height: 600px;
 }
 
-#left-about{
+#left-about {
     padding-top: 30px;
     width: 33%;
     float: left;
 }
 
-#right-about{
+#right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
 }
 
-#center-about{
+#center-about {
     width: 33%;
     margin: 0 auto;
-   
+
 }
 
-hr{
+hr {
     border-top: 1px solid #3a3a3a;
     width: 100%;
     margin: 5px 0;
 }
 
-.left-about-heading{
+.left-about-heading {
     width: 60%;
     float: right;
     line-height: 20px;
@@ -144,7 +148,7 @@ hr{
     margin-bottom: 50px;
 }
 
-.right-about-heading{
+.right-about-heading {
     width: 60%;
     float: left;
     line-height: 20px;
@@ -152,21 +156,21 @@ hr{
     margin-bottom: 50px;
 }
 
-.right-about-heading h2{
+.right-about-heading h2 {
     text-align: right;
 }
 
-.right-about-heading p{
+.right-about-heading p {
     text-align: right;
 }
 
-#welcome{
+#welcome {
     text-align: center;
     margin: 20px 0;
     font-size: 280%;
 }
 
-#circle-container{
+#circle-container {
     width: 300px;
     height: 300px;
     padding: 30px;
@@ -177,7 +181,7 @@ hr{
     margin: 0 auto;
 }
 
-#circle-cover-bg{
+#circle-cover-bg {
     background: url('../images/ethos-center-image.jpeg') no-repeat center center;
     height: 100%;
     border-radius: 50%;
@@ -185,7 +189,7 @@ hr{
 
 /* event times */
 
-#times{
+#times {
     background: url('../images/dublin-city.webp') no-repeat;
     background-size: cover;
     background-position: center;
@@ -193,9 +197,9 @@ hr{
     overflow: hidden;
 }
 
-#times div{
+#times div {
     color: #fafafa;
-    background-color: rgba( 0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .6);
     width: 20%;
     height: 300px;
     float: left;
@@ -205,23 +209,23 @@ hr{
     box-sizing: border-box;
 }
 
-#times h1{
+#times h1 {
     color: #fafafa;
 }
 
-footer{
+footer {
     height: 150px;
 }
 
-.social-networks{
+.social-networks {
     text-align: center;
 }
 
-.social-networks > li{
+.social-networks>li {
     display: inline;
 }
 
-.social-networks i{
+.social-networks i {
     font-size: 160%;
     margin: 1%;
     padding: 5%;
@@ -237,6 +241,52 @@ footer{
     column-gap: 0;
 }
 
-#photos img{
+#photos img {
     width: 100%;
+}
+
+/* Media queries */
+
+/* For larger to medium screens size from 1200px wide and down */
+
+@media screen and (max-width: 1200px) {
+    #club-ethos{
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+    
+    #welcome{
+        padding: 30px 0;
+        margin: 0;
+    }
+
+    #left-about, #right-about{
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about{
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    hr{
+        display: none;
+    }
+}
+
+/* For medium screen sizes from 905px wide and down */
+
+@media screen and (max-width: 950px) {
+    #menu{
+        clear: left;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
 }
